@@ -1,0 +1,16 @@
+services:
+  backend:
+    image: backendimage
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8005:3000"
+
+  frontend:
+    image: frontendimage
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "8006:3001"
